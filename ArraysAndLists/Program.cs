@@ -10,7 +10,7 @@ namespace ArraysAndLists
             //TODO:
 
             // Create an int Array and populate numbers 1-10
-            int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             /* Create two Lists of type int.
              * Name one List "evens"
              * Name the other List "odds"
@@ -40,24 +40,12 @@ namespace ArraysAndLists
              * Try to be creative in your display
              */
             Console.WriteLine("These are the even numbers from 1-10: ");
-            for (int i = 0; i<evens.Count; i++)
-            {
-                if (i != evens.Count-1)
-                {
-                    Console.Write($"{evens[i]}, ");
-                }
-                else { Console.WriteLine(evens[i]); }
-            }
+            int[] arrayEvens = evens.ToArray();
+            Console.WriteLine(string.Join(", ", arrayEvens));
 
             Console.WriteLine("These are the odd numbers from 1-10: ");
-            for (int i = 0; i < odds.Count; i++)
-            {
-                if (i != odds.Count - 1)
-                {
-                    Console.Write($"{odds[i]}, ");
-                }
-                else { Console.WriteLine(odds[i]); }
-            }
+            int[] arrayOdds = odds.ToArray();
+            Console.WriteLine(string.Join(", ", arrayOdds));
         }
     }
 }
